@@ -36,7 +36,7 @@
 
 /* Only line 5 can be used because only PA pins are able to be used as ADC as
    per the CC2538's user guide (the current RIOT code is incorrect!) */
-#define ADC_LINE_SELECT     (5)   //do not modify
+#define ADC_LINE_SELECT     (5)   
 #define ADC_RES             ADC_RES_12BIT
 
 //#define RELAY_NODE_ADDR     "fe80::6043:87ff:fe85:1930" //TAP0
@@ -156,7 +156,7 @@ int main(void)
             printf("Power level is now %d\n", tx_power);
         }
     }
-    //Todo
+ 
     mutex_init(&mutex);
     udp_rx_args_t udp_rx_args;
     udp_rx_args.mutex = &mutex;
