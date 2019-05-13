@@ -17,6 +17,7 @@ arbitrary USB devices plugged in. To access the USB device, you either need elev
 (via `sudo`), or you need to give yourself access the proper way, adding the user `pi` to the
 `dialout` user group.
 
+Additionally, make sure your laptop supports Python3.
 
 ### Installing and running
 
@@ -26,4 +27,7 @@ make BOARD=openmote -b -PROGRAMMER=cc2538bsl
   \PORT=/dev/ttyUSB0 flash term
   
 ```
-
+In another terminal, run 
+```
+python3 sensor_processing.py
+```
